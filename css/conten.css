@@ -36,7 +36,7 @@ ul li::after {
     width: 0;
     height: 2px;
     background-color: #fff;
-    transition: 0.3s all ease-in-out;
+    transition: 0.1s all ease-in-out;
 }
 
 ul li::before {
@@ -70,7 +70,7 @@ ul li a {
     cursor: pointer;
     color: #fff;
     font-size: 20px;
-    transition: 0.3s all ease-in-out;
+    transition: 0.1s all ease-in-out;
 }
 
 .logo{
@@ -267,6 +267,7 @@ img {
 }
 .section-3{
     display: flex;
+    
 }
 .p{
     background: transparent;
@@ -444,7 +445,7 @@ p {
     grid-template-areas: "title y" "subtitle subtitle subtitle";
     grid-gap: 1rem;
     gap: 1rem;
-    transition: .5s var(--ease-out-cubic);
+    transition: 0.1s var(--ease-out-cubic);
     border-bottom: 0 solid;
     pointer-events: auto;
     outline: 0;
@@ -543,7 +544,7 @@ p {
     transform: translate(-50%, -50%);
     pointer-events: none;
     visibility: hidden;
-    transition: 0.2s
+    transition: 0.1s
 }
 
 .thumbnail:before {
@@ -560,7 +561,7 @@ p {
 .thumbnail__inner {
 
     opacity: 0;
-    transition: .2s opacity var(--ease-out-cubic), 1s transform var(--ease-out-back)
+    transition: 0.1s opacity var(--ease-out-cubic), 1s transform var(--ease-out-back)
 }
 
 /* img */
@@ -574,7 +575,7 @@ p {
     object-fit: cover;
     transform: scale(.95);
     border-radius: inherit;
-    transition: 1s transform var(--ease-out-cubic)
+    transition: 0.1s transform var(--ease-out-cubic)
 }
 
 .title {

@@ -7,4 +7,4 @@ ScrollReveal({
 
 ScrollReveal().reveal('.logo,img', { delay: 500, origin:'left' });
 ScrollReveal().reveal('.section-1,.contains', { delay: 600, origin:'bottom' });
-ScrollReveal().reveal('h1,h3,p', { delay: 700, origin:'left', interval:200 });
+ScrollReveal().reveal('h1,h3,p', { delay: 50, origin:'left', interval:50 });
