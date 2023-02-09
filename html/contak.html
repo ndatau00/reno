@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Document</title>
+</head>
+<body>
+        <!-- Contact -->
+        <section id="contact" class="pb-5">
+            <div class="container" data-aos="fade-up">
+                <div class="row text-center mb-5">
+                    <div class="col">
+                        <h2>Contact <span class="acolor">Ant1po1e</span></h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center text-center bg-content">
+                    <div class="col-md-6">
+                        <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                            <strong>Thanks!</strong> Your message has been submitted.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <form name="Ant1po1e-contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="name" name="name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email1" aria-describedby="email"
+                                    name="email" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="Message" class="form-label">Message</label>
+                                <textarea class="form-control" id="Message" rows="3" name="message"></textarea>
+                            </div>
+                            <button id="submit" type="submit" class="btn btn-send">Submit</button>
+    
+                            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Loading...
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-END -->
+    
+    
+        <!-- Footer -->
+        <footer class="text-white text-center pb-3 pt-4 border-top">
+            <p class="share">
+                <a class="bi bi-youtube text-light" href="https://www.youtube.com/@ant1po1e" target="blank"></a>&nbsp;&nbsp;
+                <a class="bi bi-twitter text-light" href="https://www.twitter.com/apolantipole" target="blank"></a>&nbsp;&nbsp;
+                <a class="bi bi-instagram text-light" href="https://www.instagram.com/_ant1po1e"
+                    target="blank"></a>&nbsp;&nbsp;
+                <a class="bi bi-github text-light" href="https://github.com/ant1po1e" target="blank"></a>
+            </p>
+            <p>Copyright &copy; 2022 <a href="https://ant1po1e.vercel.app" style="text-decoration:none;"
+                    class="text-blue fw-bold" target="blank">Ant1po1e</a>. All rights reserved.</p>
+        </footer>
+        <!-- Footer-END -->
+    
+    
+        <!-- Bootsrrap CSS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
+    
+    
+        <!-- Java Form Script -->
+        <script>
+            const scriptURL =
+                "https://script.google.com/macros/s/AKfycbx0eCzzKaKtZ2gIwprnJ-5xtkpoM0kqcLv5uoVVUVZZMgIsJ6Fn6YHJ5OzUIOcpIcJV/exec";
+            const form = document.forms["Ant1po1e-contact-form"];
+            const btnSend = document.querySelector(".btn-send");
+            const btnLoading = document.querySelector(".btn-loading");
+            const myAlert = document.querySelector(".alert");
+    
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                btnLoading.classList.toggle("d-none");
+                btnSend.classList.toggle("d-none");
+                fetch(scriptURL, {
+                        method: "POST",
+                        body: new FormData(form),
+                    })
+                    .then((response) => {
+                        btnLoading.classList.toggle("d-none");
+                        btnSend.classList.toggle("d-none");
+                        myAlert.classList.toggle("d-none");
+                        form.reset();
+                        console.log("Success!", response);
+                    })
+                    .catch((error) => console.error("Error!", error.message));
+            });
+        </script>
+    
+    
+        <!-- AOS Script -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    
+    
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+    
+    
+        <!-- My CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+    
+    
+</body>
+</html>

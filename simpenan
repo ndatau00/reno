@@ -1,0 +1,526 @@
+/* '*live' */
+
+.label[data-v-00e24e56] { 
+    font-family: "Formula Condensed", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 2.4rem;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    padding: var(--padding) 0 var(--padding) var(--padding)
+}
+.label[data-v-00e24e56]:before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: .25em;
+    -webkit-animation: 1.5s blink-data-v-00e24e56 var(--ease-out-cubic) infinite;
+    animation: 1.5s blink-data-v-00e24e56 var(--ease-out-cubic) infinite
+}
+@media only screen and (min-width:600px) {
+    .label[data-v-00e24e56] {
+        font-size: 2.8rem
+    }
+}
+
+section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    padding: 10px 15px;
+    margin: 0 10px;
+    position: relative;
+}
+
+ul li::before,
+ul li::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.3s all ease-in-out;
+}
+
+ul li::before {
+    top: 0;
+    left: 0;
+}
+
+ul li::after {
+    bottom: 0;
+    right: 0;
+}
+
+ul li.active::before,
+ul li:hover::before {
+    right: 0;
+    left: auto;
+    width: 100%;
+    background-color: #f39c12;
+}
+
+ul li.active::after,
+ul li:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+    background-color: #f39c12;
+}
+
+ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.3s all ease-in-out;
+}
+
+ul li.active a,
+ul li:hover a {
+    color: #f39c12;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    height: 330px;
+    width: 330px;
+    border-radius: 900%;
+    background: linear-gradient(#08ffe6, #fcd200);
+    transform: translate(-500px, -150px);
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: linear-gradient(#fcd200, #ff0808);
+    transform: translate(490px, 150px);
+}
+
+.container .ball1 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #00ff95;
+    transform: translate(-250px, 200px);
+    position: absolute;
+}
+
+.container .ball2 {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #00f7ff;
+    transform: translate(-10px, 200px);
+    position: absolute;
+}
+
+.container .ball3 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #c8ff00;
+    transform: translate(250px, -200px);
+    position: absolute;
+}
+
+.container .box {
+    height: 86vh;
+    width: 75%;
+    padding: 0, 20px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+}
+
+.container .box nav {
+    height: 7%;
+    width: 95%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto;
+    padding: 20px;
+}
+
+.container .box nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.container .box nav ul li a {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.container .box nav ul li a:hover {
+    color: #ffc404;
+}
+
+.container .box nav .logo {
+    font-size: 35px;
+    color: #000;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.container .box .contains {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+    position: relative;
+    margin-top: 8%;
+    padding-left: 80px;
+}
+
+.container .box .contains .section-1 {
+    position: absolute;
+    margin-top: 70px;
+}
+
+.container .box .contains .section-1 h1 {
+    font-size: 75px;
+}
+
+.container .box .contains .section-1 h3 {
+    font-size: 35px;
+}
+
+.container .box .contains .section-1 p {
+    margin-top: 5px;
+}
+
+.container .box .contains .section-1 .button {
+    margin-top: 50px;
+}
+
+.container .box .contains .section-1 .button a {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.container .box .contains .section-1 .button a:hover {
+    background: #fff;
+    color: #000;
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    list-style: none;
+    font-family: 'Raleway', sans-serif
+}
+
+body { background-color: #383838; }
+
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    padding: 10px 15px;
+    margin: 0 10px;
+    position: relative;
+}
+
+ul li::before,
+ul li::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.3s all ease-in-out;
+}
+
+ul li::before {
+    top: 0;
+    left: 0;
+}
+
+ul li::after {
+    bottom: 0;
+    right: 0;
+}
+
+ul li.active::before,
+ul li:hover::before {
+    right: 0;
+    left: auto;
+    width: 100%;
+    background-color: #f39c12;
+}
+
+ul li.active::after,
+ul li:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+    background-color: #f39c12;
+}
+
+ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.3s all ease-in-out;
+}
+
+ul li.active a,
+ul li:hover a {
+    color: #f39c12;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    height: 330px;
+    width: 330px;
+    border-radius: 900%;
+    background: linear-gradient(#08ffe6, #fcd200);
+    transform: translate(-500px, -150px);
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: linear-gradient(#fcd200, #ff0808);
+    transform: translate(490px, 150px);
+}
+
+.container .ball1 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #00ff95;
+    transform: translate(-250px, 200px);
+    position: absolute;
+}
+
+.container .ball2 {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #00f7ff;
+    transform: translate(-10px, 200px);
+    position: absolute;
+}
+
+.container .ball3 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #c8ff00;
+    transform: translate(250px, -200px);
+    position: absolute;
+}
+
+.container .box {
+    height: 86vh;
+    width: 75%;
+    padding: 0, 20px;
+    background: rgba(255, 255, 255, 0.1);
+    
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+}
+
+.container .box nav {
+    height: 7%;
+    width: 95%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto;
+    padding: 20px;
+}
+
+.container .box nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.container .box nav ul li a {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.container .box nav ul li a:hover {
+    color: #ffc404;
+}
+
+.container .box nav .logo {
+    font-size: 35px;
+    color: #000;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.container .box .contains {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+    position: relative;
+    margin-top: 8%;
+    padding-left: 80px;
+}
+
+.container .box .contains .section-1 {
+    position: absolute;
+    margin-top: 70px;
+}
+
+.container .box .contains .section-1 h1 {
+    font-size: 75px;
+}
+
+.container .box .contains .section-1 h3 {
+    font-size: 35px;
+}
+
+.container .box .contains .section-1 p {
+    margin-top: 5px;
+}
+
+.container .box .contains .section-1 .button {
+    margin-top: 50px;
+}
+
+.container .box .contains .section-1 .button a {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.container .box .contains .section-1 .button a:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* html contact */
+<div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+
+/* css */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
